@@ -4,7 +4,7 @@ import { CustomCssVariables } from '../../../types/custom-css-variables';
 import { ExtendedReactFunctionalComponent } from "../../../types/extended-react-functional-component";
 import { FieldContext } from '../field-context/field-context';
 
-import '../../fields/_shared/constants/text-input-generic-styles.scss';
+import 'src/styles/text-input-generic-styles.scss';
 
 export type TextInputProps = React.InputHTMLAttributes<HTMLInputElement>;
 

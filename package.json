@@ -1,10 +1,12 @@
 {
   "name": "@circle-vibe/shared",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Shared componenets, utils, hooks",
   "scripts": {
     "build": "./scripts/build.sh",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "publish": "./scripts/publish.sh",
+    "patch": "npm version patch"
   },
   "files": [
     "build"
