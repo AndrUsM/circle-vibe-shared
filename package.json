@@ -1,0 +1,19 @@
+{
+  "name": "securec-chat-shared",
+  "version": "1.0.0",
+  "description": "Shared componenets, utils, hooks",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "AndrUsM",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^16.18.96",
+    "@types/react": "^19.0.10",
+    "react": "^18.2.0",
+    "typescript": "^4.9.5",
+    "webpack": "^5.38.1",
+    "webpack-cli": "^4.7.2"
+  }
+}
