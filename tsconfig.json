@@ -1,7 +1,9 @@
 {
   "compilerOptions": {
     "baseUrl": "./",
-    "sourceMap": false,
+    "declarationDir": "build",
+    "outDir": "./build",
+    "sourceMap": true,
     "target": "esNext",
     "lib": [
       "ES2015",
@@ -25,7 +27,6 @@
     "skipLibCheck": true,
     "declaration": true,
     "allowSyntheticDefaultImports": true,
-    "declarationDir": "build",
   },
   "exclude": [
     "node_modules",
