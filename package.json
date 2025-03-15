@@ -2,11 +2,13 @@
   "name": "@circle-vibe/shared",
   "version": "1.0.1",
   "description": "Shared componenets, utils, hooks",
-  "private": true,
   "scripts": {
     "build": "./scripts/build.sh",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "files": [
+    "build"
+  ],
   "author": "AndrUsM",
   "license": "ISC",
   "main": "build/index.js",
