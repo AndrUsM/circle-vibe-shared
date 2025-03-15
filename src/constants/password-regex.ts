@@ -1,1 +1,1 @@
-export const PASSWORD_REGEX = /?|#|<|>|^|(|)|*/gi;
+export const PASSWORD_REGEX = /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*\W)(?!.* )$/
