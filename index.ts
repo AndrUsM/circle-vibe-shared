@@ -1,4 +1,3 @@
-export * from './src/colors'
 export * from './src/components';
 export * from './src/configuration';
 export * from './src/constants';

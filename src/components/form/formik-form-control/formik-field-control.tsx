@@ -4,6 +4,7 @@ import { useField } from "formik";
 
 import { ExtendedReactFunctionalComponent } from "src/types";
 import { FieldContextProvider } from "../field-context/field-context-provider";
+import { FormControl } from '../form-control/form-control';
 
 interface FormikFormGroupProps extends React.HTMLAttributes<HTMLDivElement> {
   formFieldName: string;
@@ -36,6 +37,8 @@ export const FormikFormControl: ExtendedReactFunctionalComponent<FormikFormGroup
           setError(err ?? undefined);
         }
       }}
-    >{children}</FieldContextProvider>
+    >
+      <FormControl>{children}</FormControl>
+    </FieldContextProvider>
   )
 }
