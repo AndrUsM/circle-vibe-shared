@@ -26,21 +26,21 @@ export const FormControlInput: ExtendedReactFunctionalComponent<
         {
           '--text-input-border-color':
             (fieldProvider.errors ?? '')?.length > 0
-              ? 'var(--chat-var-default-field-border-errors-color)'
-              : 'transparent',
+              ? 'var(--text-input-error-border-color)'
+              : 'var(--text-input-default-border-color)',
           '--text-input-text-color': `var(${
             (fieldProvider.errors ?? '')?.length > 0
-              ? '--chat-var-default-field-color-errors-color'
-              : '--chat-var-default-text-color'
+              ? '--text-input-error-text-color'
+              : '--text-input-default-text-color'
           })`,
           '--text-input-outline-color':
             (fieldProvider.errors ?? '')?.length > 0
-              ? 'var(--chat-var-default-field-outline-errors-color)'
+              ? 'var(--text-input-error-outline-color)'
               : 'transparent',
           '--text-input-background': `var(${
             (fieldProvider.errors ?? '')?.length > 0
-              ? '--chat-var-default-field-errors-background'
-              : '--chat-var-color-white'
+              ? '--text-input-error-bg-color'
+              : '--text-input-default-bg-color'
           })`,
         } as CustomCssVariables
       }
