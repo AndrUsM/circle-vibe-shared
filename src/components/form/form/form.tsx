@@ -11,7 +11,7 @@ export const Form: ExtendedReactFunctionalComponent<FormProps> = ({ children, ..
 
   return (
     <Formik {...formProps}>
-      <FormikForm className='tw:p-1 tw:rounded'>{children}</FormikForm>
+      <FormikForm className='p-1 rounded-1'>{children}</FormikForm>
     </Formik>
   )
 }
