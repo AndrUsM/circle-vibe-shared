@@ -7,3 +7,4 @@ export * from './form-control';
 export * from './form-control-error';
 export * from './form';
 export * from './input';
+export * from './form-field';
