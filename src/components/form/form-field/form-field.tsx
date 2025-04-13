@@ -1,10 +1,10 @@
 import React from 'react';
 
 import { ExtendedReactFunctionalComponent } from 'src/types';
-import { Label } from '../label/label';
 import { FormikFormControl } from '../formik-form-control';
 import { Show } from 'src/components/show';
 import { FormControlError } from '../form-control-error';
+import { FormControlLabel } from '../form-control-label';
 
 interface FormFieldProps {
   label?: string;
@@ -19,7 +19,7 @@ export const FormField: ExtendedReactFunctionalComponent<FormFieldProps> = ({
   return (
     <FormikFormControl formFieldName={formFieldName}>
       <Show.When isTrue={Boolean(label)}>
-        <Label>{label}</Label>
+        <FormControlLabel>{label}</FormControlLabel>
       </Show.When>
 
       {children}
