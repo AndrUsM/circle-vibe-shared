@@ -8,5 +8,5 @@ import { Label } from '../label/label';
 export const FormControlLabel: ExtendedReactFunctionalComponent = ({ children }) => {
   const { errors } = useContext(FieldContext);
 
-  return <Label hasErrors={Boolean(errors?.length)}>{children}{ errors ? '*' : '' }</Label>
+  return <Label hasErrors={Boolean(errors?.length)}>{children}</Label>
 }
