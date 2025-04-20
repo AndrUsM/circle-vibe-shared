@@ -5,9 +5,10 @@ import { ExtendedReactFunctionalComponent } from 'src/types';
 
 interface LabelProps {
   hasErrors?: boolean;
+  isRequired?: boolean;
 }
 
-export const Label: ExtendedReactFunctionalComponent<LabelProps> = ({ children, hasErrors }) => {
+export const Label: ExtendedReactFunctionalComponent<LabelProps> = ({ children, hasErrors, isRequired }) => {
   return (
     <span
       className={classnames('text-base truncate min-h-3 block', {
@@ -16,7 +17,7 @@ export const Label: ExtendedReactFunctionalComponent<LabelProps> = ({ children, 
       })}
     >
       {children}
-      {hasErrors ? '*' : ''}
+      {isRequired ? '*' : ''}
     </span>
   );
 };

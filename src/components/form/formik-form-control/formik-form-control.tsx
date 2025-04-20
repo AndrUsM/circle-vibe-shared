@@ -20,6 +20,7 @@ export const FormikFormControl: ExtendedReactFunctionalComponent<FormikFormGroup
     <FieldContextProvider
       value={{
         value,
+        name: formFieldName,
         errors: error ?? null,
         touched,
         setTouched,
