@@ -1,8 +1,8 @@
 import { ObjectSchema } from 'yup';
 
-export const isFieldRequired = (schema: ObjectSchema<any>, key: string) => {
+export const isFormikFieldRequired = (schema: ObjectSchema<any>, key: string) => {
   const fieldSchema = schema?.fields[key];
 
   // @ts-ignore
-  return fieldSchema?.exclusiveTests?.required === true;
+  return fieldSchema?.spec?.required === true;
 };
