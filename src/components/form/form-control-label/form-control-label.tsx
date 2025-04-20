@@ -11,6 +11,7 @@ export const FormControlLabel: ExtendedReactFunctionalComponent = ({ children })
   const { errors, name } = useContext(FieldContext);
   const {validationSchema} = useFormContext();
   const isRequired = isFormikFieldRequired(validationSchema, name as string);
+  console.log(validationSchema, name);
 
   return <Label isRequired={isRequired} hasErrors={Boolean(errors?.length)}>{children}</Label>
 }
