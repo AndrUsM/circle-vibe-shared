@@ -11,7 +11,7 @@ interface FormFieldProps {
   formFieldName: string;
 }
 
-export const FormField: ExtendedReactFunctionalComponent<FormFieldProps> = ({
+export const FormGroup: ExtendedReactFunctionalComponent<FormFieldProps> = ({
   label,
   formFieldName,
   children,
