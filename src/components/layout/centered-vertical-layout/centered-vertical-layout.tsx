@@ -14,7 +14,7 @@ export const CenteredVertialLayout: ExtendedReactFunctionalComponent<CenteredVer
   justifyContent = 'initial',
   children
 }) => (
-  <div className="centered-vertial-layout" style={{
+  <div className="centered-vertical-layout" style={{
     '--space': space,
     '--justify-content': justifyContent
   } as CustomCssVariables}>{children}</div>
