@@ -5,7 +5,6 @@ export * from './form-error';
 export * from './form-control-error';
 export * from './form-control';
 export * from './form-control-error';
-export * from './form';
 export * from './input';
-export * from './form-field';
+export * from './form-group';
 export * from './form-control-label';
