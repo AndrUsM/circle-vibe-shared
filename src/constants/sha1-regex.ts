@@ -1,0 +1,1 @@
+export const SHA1REGEX = /^[a-f0-9]{40}$/i;
