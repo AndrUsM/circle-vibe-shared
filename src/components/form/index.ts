@@ -8,3 +8,4 @@ export * from './form-control-error';
 export * from './input';
 export * from './form-group';
 export * from './form-control-label';
+export * from './form';
