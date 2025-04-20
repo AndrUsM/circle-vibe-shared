@@ -2,6 +2,7 @@ import React from 'react';
 import classnames from 'classnames';
 
 import { ExtendedReactFunctionalComponent } from 'src/types';
+import { ClusterLayout } from 'src/components/layout';
 
 interface LabelProps {
   hasErrors?: boolean;
@@ -16,8 +17,11 @@ export const Label: ExtendedReactFunctionalComponent<LabelProps> = ({ children, 
         'text-error': hasErrors,
       })}
     >
-      {children}
-      {isRequired ? '*' : ''}
+      <span>
+        {children}
+
+        {isRequired ? ' *' : ''}
+      </span>
     </span>
   );
 };
