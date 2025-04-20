@@ -5,6 +5,7 @@ export interface FieldContextValue {
   inputMode?: string;
   touched?: boolean;
   name: string | null;
+  isRequired?: boolean;
   setTouched: (touched: boolean) => void;
   onBlur: (_event: unknown) => void;
   setValue: (updatedValue: any) => void;
