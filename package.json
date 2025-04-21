@@ -1,6 +1,6 @@
 {
   "name": "@circle-vibe/shared",
-  "version": "1.0.35",
+  "version": "1.0.36",
   "description": "Shared componenets, utils, hooks",
   "scripts": {
     "build": "./scripts/build.sh",
