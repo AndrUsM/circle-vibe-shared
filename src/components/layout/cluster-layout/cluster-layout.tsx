@@ -18,7 +18,7 @@ export const ClusterLayout: ExtendedReactFunctionalComponent<ClusterLayoutProps>
   className,
   space = '1rem'
 }) => (
-  <div className={`cluster-layout ${className}`} style={{
+  <div className={`cluster-layout ${className ?? ''}`} style={{
     '--space': space,
     '--justify-content': justifyContent,
     '--align-items': alignItems
