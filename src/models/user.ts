@@ -14,6 +14,7 @@ export interface User {
   country?: string | null;
   phones?: string[] | null;
   email: string;
-  secret: string;
+  privateToken: string;
+  secret: boolean;
   primaryPhone?: string | null;
 }
