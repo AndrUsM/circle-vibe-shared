@@ -2,7 +2,7 @@ import { MessageStatus, MessageType } from "src/enums";
 import { File } from "./file";
 import { User } from "./user";
 
-export interface MessageModel {
+export interface Message {
   _id: number;
   content: string;
   images: File[];
@@ -15,6 +15,6 @@ export interface MessageModel {
   createdDate: string;
   updatedDate: string;
   messageType: MessageType;
-  theads: MessageModel[];
+  theads: Message[];
   hidden: boolean;
 }

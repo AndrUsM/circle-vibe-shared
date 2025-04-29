@@ -1,6 +1,6 @@
 import { ChatType } from "src/enums";
 import { User } from "./user";
-import { MessageModel } from "./message";
+import { Message } from "./message";
 
 export interface Chat {
   _id: string;
@@ -15,7 +15,7 @@ export interface Chat {
   hasUnreadMessages: boolean;
   empty: boolean;
   messagesCount: number;
-  lastMessage: MessageModel | null;
+  lastMessage: Message | null;
   usersLimit: number;
   removed: boolean;
   isActive: boolean;
