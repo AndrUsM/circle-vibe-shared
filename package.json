@@ -19,12 +19,7 @@
     "*.scss",
     "*.css"
   ],
-  "peerDependencies": {
-    "date-fns": ">=4.0",
-    "formik": ">=2.4.6",
-    "react": ">=16",
-    "yup": ">=1.6"
-  },
+
   "babel": {
     "presets": [
       "@babel/preset-env",
