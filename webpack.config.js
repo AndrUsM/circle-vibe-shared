@@ -57,8 +57,6 @@ const CONFIG = {
   optimization: {
     minimize: true,
     minimizer: [new TerserPlugin()],
-    usedExports: true,
-    sideEffects: true
   },
   module: {
     rules: [BABEL_LOADER, SVG_LOADER, SCSS_LOADER],
