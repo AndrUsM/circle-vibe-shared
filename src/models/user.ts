@@ -1,3 +1,4 @@
+import { UserType } from "src/enums";
 import { File } from "./file";
 
 export interface User {
@@ -6,7 +7,7 @@ export interface User {
   surname: string;
   birthDate: Date;
   password: string;
-  avatar?: File;
+  avatar: File;
   isHiddenContactInfo: boolean;
   address?: string | null;
   city?: string | null;
@@ -17,4 +18,5 @@ export interface User {
   privateToken: string;
   secret: boolean;
   primaryPhone?: string | null;
+  type: UserType;
 }

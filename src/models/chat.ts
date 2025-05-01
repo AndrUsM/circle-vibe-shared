@@ -11,8 +11,8 @@ export interface Chat {
   readableName: string;
   type: ChatType;
   isGroupChat: boolean;
-  createdAt: string;
-  updatedAt: string;
+  createdAt: Date;
+  updatedAt: Date;
   hasUnreadMessages: boolean;
   empty: boolean;
   messagesCount: number;
@@ -21,5 +21,5 @@ export interface Chat {
   removed: boolean;
   isActive: boolean;
   isArchive: boolean;
-  avatarUrl: File;
+  avatar: File;
 }

@@ -3,18 +3,19 @@ import { File } from "./file";
 import { User } from "./user";
 
 export interface Message {
-  _id: number;
+  _id: string;
   content: string;
   images: File[];
   videos: File[];
   files: File[];
   status: MessageStatus;
-  chatId: number;
-  receiverId: number;
+  chatId: string;
+  receiver: User;
   sender: User;
-  createdDate: string;
-  updatedDate: string;
+  createdDate: Date;
+  updatedDate: Date;
   messageType: MessageType;
   theads: Message[];
+  removed: boolean;
   hidden: boolean;
 }
