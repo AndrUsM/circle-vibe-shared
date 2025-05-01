@@ -1,6 +1,6 @@
 {
   "name": "@circle-vibe/shared",
-  "version": "1.0.49",
+  "version": "1.0.47",
   "types": "./build/index.d.ts",
   "description": "Shared componenets, utils, hooks",
   "scripts": {
@@ -15,7 +15,11 @@
   "author": "AndrUsM",
   "license": "ISC",
   "main": "build/index.js",
-  "sideEffects": true,
+  "sideEffects": [
+    "*.scss",
+    "*.css",
+    "./src/enums/*.ts"
+  ],
   "peerDependencies": {
     "date-fns": ">=4.0",
     "formik": ">=2.4.6",

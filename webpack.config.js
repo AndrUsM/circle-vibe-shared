@@ -16,43 +16,34 @@ const BABEL_LOADER = {
       presets: [
         ['@babel/preset-env', { modules: false }],
         '@babel/preset-react',
-        "@babel/preset-typescript",
-      ]
-    }
-  }
+        ['@babel/preset-typescript', { onlyRemoveTypeImports: true }],
+      ],
+    },
+  },
 };
 
 const SVG_LOADER = {
   test: /\.svg$/,
-  use: [
-    '@svgr/webpack',
-    'url-loader',
-  ]
+  use: ['@svgr/webpack', 'url-loader'],
 };
 
 const SCSS_LOADER = {
   test: /\.scss$/,
-  use: [
-    'style-loader',
-    'css-loader',
-    'sass-loader',
-  ]
+  use: ['style-loader', 'css-loader', 'sass-loader'],
 };
 
 const resolve = {
-  extensions: [
-    '.ts', '.tsx', '.js', '.jsx',
-  ],
+  extensions: ['.ts', '.tsx', '.js', '.jsx'],
   plugins: [
     new TsconfigPathsPlugin({
-      configFile: TS_CONFIG
-    })
-  ]
-}
+      configFile: TS_CONFIG,
+    }),
+  ],
+};
 
 const entry = {
   index: './index.ts',
-}
+};
 
 const CONFIG = {
   mode: 'production',
@@ -66,20 +57,15 @@ const CONFIG = {
   optimization: {
     minimize: true,
     minimizer: [new TerserPlugin()],
+    usedExports: true,
+    sideEffects: true
   },
   module: {
     rules: [BABEL_LOADER, SVG_LOADER, SCSS_LOADER],
   },
   resolve,
   stats: 'minimal',
-  externals: [
-    'react',
-    'date-fns',
-    'react-dom',
-    'react-router',
-    'react-i18next',
-    'react-router-dom',
-  ],
+  externals: ['react', 'date-fns', 'react-dom', 'react-router', 'react-i18next', 'react-router-dom'],
   plugins: [
     new ForkTsCheckerWebpackPlugin({
       typescript: {
@@ -87,10 +73,10 @@ const CONFIG = {
         diagnosticOptions: {
           semantic: true,
           syntactic: true,
-        }
-      }
-    })
-  ]
-}
+        },
+      },
+    }),
+  ],
+};
 
 module.exports = CONFIG;
