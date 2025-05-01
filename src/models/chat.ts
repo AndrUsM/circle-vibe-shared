@@ -1,6 +1,7 @@
 import { ChatType } from "src/enums";
 import { User } from "./user";
 import { Message } from "./message";
+import { File } from "./file";
 
 export interface Chat {
   _id: string;
