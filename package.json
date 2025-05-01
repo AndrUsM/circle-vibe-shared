@@ -1,6 +1,6 @@
 {
   "name": "@circle-vibe/shared",
-  "version": "1.0.44",
+  "version": "1.0.45",
   "types": "./build/index.d.ts",
   "description": "Shared componenets, utils, hooks",
   "scripts": {
@@ -19,7 +19,6 @@
     "*.scss",
     "*.css"
   ],
-
   "babel": {
     "presets": [
       "@babel/preset-env",
