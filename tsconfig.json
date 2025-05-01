@@ -23,7 +23,7 @@
     "noImplicitAny": true,
     "alwaysStrict": true,
     "noUnusedParameters": true,
-    "isolatedModules": true,
+    "isolatedModules": false,
     "pretty": true,
     "skipLibCheck": true,
     "declaration": true,

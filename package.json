@@ -18,7 +18,7 @@
   "sideEffects": [
     "*.scss",
     "*.css",
-    "./src/enums"
+    "./src/enums/*.ts"
   ],
   "peerDependencies": {
     "date-fns": ">=4.0",
