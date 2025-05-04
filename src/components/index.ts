@@ -3,3 +3,7 @@ export * from './form';
 export * from './layout';
 export * from './show';
 export * from './submit-button';
+export * from './dropdown';
+export * from './menu';
+export * from './tooltip';
+export * from './popover';
