@@ -19,6 +19,7 @@ export interface Chat {
   lastMessage: Message | null;
   usersLimit: number;
   removed: boolean;
+  hidden: boolean;
   isActive: boolean;
   isArchive: boolean;
   avatar: File;
