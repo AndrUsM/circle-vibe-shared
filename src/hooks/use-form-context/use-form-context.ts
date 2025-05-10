@@ -1,7 +1,7 @@
 import { FormikContextType, useFormikContext } from 'formik';
 
-export function useFormContext<T>() {
+export function useFormContext<T = unknown>() {
   const formikContext = useFormikContext<T>();
 
-  return formikContext as FormikContextType<unknown>;
+  return formikContext as FormikContextType<T>;
 }
