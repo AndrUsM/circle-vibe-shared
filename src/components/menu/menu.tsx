@@ -6,6 +6,7 @@ import { MenuButtonProps } from "./types";
 import { MenuContext } from "./menu.context";
 import { useDropdown } from "src/hooks";
 import { Dropdown } from "../dropdown";
+import { ExtendedReactFunctionalComponent } from "src/types";
 
 interface DropdownMenuProps extends React.HTMLAttributes<HTMLDivElement> {
   readonly button: (props: MenuButtonProps) => React.ReactNode;
@@ -17,7 +18,7 @@ interface DropdownMenuProps extends React.HTMLAttributes<HTMLDivElement> {
   readonly strategy?: "fixed" | "absolute";
 }
 
-export const Menu: React.FC<DropdownMenuProps> = ({
+export const Menu: ExtendedReactFunctionalComponent<DropdownMenuProps> = ({
   button,
   isOpen,
   fullDropdownWidth = false,

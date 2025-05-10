@@ -1,4 +1,4 @@
-import { SyntheticEvent } from "react";
+import { SyntheticEvent } from 'react';
 
 export const getFormikFormControlValue = (event: SyntheticEvent<HTMLInputElement>) => {
   const target = event.currentTarget;
@@ -12,4 +12,4 @@ export const getFormikFormControlValue = (event: SyntheticEvent<HTMLInputElement
   }
 
   return target.value;
-}
+};

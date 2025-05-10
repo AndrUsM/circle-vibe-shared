@@ -36,12 +36,14 @@
     "yup": ">=1.6"
   },
   "dependencies": {
+    "@coreui/icons": "^3.0.1",
+    "@coreui/icons-react": "2.3.0",
     "classnames": "^2.5.1",
     "date-fns": "^4.1.0",
     "formik": "^2.4.6",
+    "js-cookie": "^3.0.5",
     "react": "^18.2.0",
     "react-dom": "^19.0.0",
-    "react-i18next": "^15.4.1",
     "react-router-dom": "^7.4.0",
     "yup": "^1.6.1"
   },
@@ -52,6 +54,7 @@
     "@babel/preset-typescript": "^7.27.0",
     "@eslint/js": "^9.26.0",
     "@floating-ui/react": "^0.27.8",
+    "@types/js-cookie": "^3.0.6",
     "@types/node": "^16.18.96",
     "@types/react": "^19.0.10",
     "babel-loader": "^10.0.0",
@@ -64,7 +67,7 @@
     "style-loader": "^4.0.0",
     "terser-webpack-plugin": "^5.3.14",
     "tsconfig-paths-webpack-plugin": "^4.2.0",
-    "typescript": "^4.9.5",
+    "typescript": "^4.5.5",
     "typescript-eslint": "^8.31.1",
     "webpack": "^5.91.0",
     "webpack-cli": "^5.1.4"

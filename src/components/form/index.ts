@@ -10,3 +10,5 @@ export * from './form-group';
 export * from './form-control-label';
 export * from './form';
 export * from './form-submit-button';
+export * from './form-control-select';
+export * from './select';
