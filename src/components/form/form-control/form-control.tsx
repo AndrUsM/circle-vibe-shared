@@ -6,6 +6,6 @@ import { ExtendedReactFunctionalComponent } from "src/types";
 
 export const FormControl: ExtendedReactFunctionalComponent = ({ children, ...rest }) => {
   return (
-    <StackLayout space="0.5rem" {...rest}>{children}</StackLayout>
+    <StackLayout space="0.25rem" {...rest}>{children}</StackLayout>
   )
 }

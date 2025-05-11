@@ -13,7 +13,7 @@ export const FormControlCheckbox: ExtendedReactFunctionalComponent<
   const { value, setValue, isRequired } = useContext(FieldContext);
 
   return (
-    <StackLayout space="0.5rem">
+    <StackLayout space="0.25rem">
       <Checkbox
         {...props}
         isRequired={isRequired}
