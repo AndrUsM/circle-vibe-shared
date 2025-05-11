@@ -5,18 +5,15 @@ export interface User {
   _id: string;
   username: string;
   surname: string;
-  birthDate: Date;
+  birthDate?: Date;
   password: string;
-  avatar: File;
+  avatar?: File;
   isHiddenContactInfo: boolean;
-  address?: string | null;
-  city?: string | null;
-  zipCode?: string | null;
   country?: string | null;
-  phones?: string[] | null;
+  city?: string;
   email: string;
+  privateKey: string;
   privateToken: string;
-  secret: boolean;
   primaryPhone?: string | null;
   type: UserType;
 }
