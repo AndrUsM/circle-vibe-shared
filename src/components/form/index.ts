@@ -12,3 +12,5 @@ export * from './form';
 export * from './form-submit-button';
 export * from './form-control-select';
 export * from './select';
+export * from './checkbox';
+export * from './form-control-checkbox';
