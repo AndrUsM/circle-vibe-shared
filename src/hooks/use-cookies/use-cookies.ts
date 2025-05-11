@@ -1,16 +1,16 @@
-import Cookies from "js-cookie";
+import cookies from "js-cookie";
 
 export const useCookies = () => {
   const set = (name: string, value: string, days = 7) => {
-    Cookies.set(name, value, { expires: days });
+    cookies.set(name, value, { expires: days });
   };
 
   const get = (name: string) => {
-    return Cookies.get(name);
+    return cookies.get(name);
   };
 
   const remove = (name: string) => {
-    Cookies.remove(name);
+    cookies.remove(name);
   };
 
   return {

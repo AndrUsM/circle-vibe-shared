@@ -63,7 +63,7 @@ const CONFIG = {
   },
   resolve,
   stats: 'minimal',
-  externals: ['react', 'date-fns', 'react-dom', 'react-router', 'react-i18next', 'react-router-dom'],
+  externals: ['react', 'date-fns', 'react-dom', 'react-router', 'react-router-dom'],
   plugins: [
     new ForkTsCheckerWebpackPlugin({
       typescript: {
