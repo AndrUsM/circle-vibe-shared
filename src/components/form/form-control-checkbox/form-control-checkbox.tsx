@@ -9,7 +9,7 @@ import { getFormikFormControlValue } from 'src/utils';
 
 export const FormControlCheckbox: ExtendedReactFunctionalComponent<
   React.InputHTMLAttributes<HTMLInputElement>
-> = ({ children, ...props }) => {
+> = (props) => {
   const { value, setValue, isRequired } = useContext(FieldContext);
 
   return (
