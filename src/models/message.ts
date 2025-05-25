@@ -2,6 +2,7 @@ import { MessageStatus, MessageType } from "src/enums";
 import { MessageFile } from "./file";
 import { User } from "./user";
 import { Thread } from "./thread";
+import { ChatParticipant } from "./chat-participant";
 
 export interface Message {
   id: number;
@@ -16,6 +17,6 @@ export interface Message {
   threadId: number;
   removed: boolean;
   hidden: boolean;
-  sender: User;
+  sender: ChatParticipant;
   thread?: Thread;
 }
