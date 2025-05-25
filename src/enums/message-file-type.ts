@@ -1,7 +1,8 @@
-export enum FileType {
+export enum MessageFileType {
   MP4 = 'video/mp4',
   OGG = 'video/ogg',
   WEBM = 'video/webm',
   AVI = 'video/avi',
-  // extends to documents
+  DOCUMENT = 'document',
+  MS_DOCUMENT = 'ms_document',
 }

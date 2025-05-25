@@ -2,4 +2,5 @@ export * from './user';
 export * from './file';
 export * from './message';
 export * from './chat';
-export * from './admin';
+export * from './thread';
+export * from './thread-participant';

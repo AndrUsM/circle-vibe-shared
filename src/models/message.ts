@@ -1,21 +1,21 @@
 import { MessageStatus, MessageType } from "src/enums";
-import { File } from "./file";
+import { MessageFile } from "./file";
 import { User } from "./user";
+import { Thread } from "./thread";
 
 export interface Message {
-  _id: string;
+  id: number;
   content: string;
-  images: File[];
-  videos: File[];
-  files: File[];
+  files: MessageFile[];
   status: MessageStatus;
-  chatId: string;
-  receiver: User;
-  sender: User;
-  createdDate: Date;
-  updatedDate: Date;
+  chatId: number;
+  senderId: number;
+  createdAt: Date;
+  updatedAt: Date;
   messageType: MessageType;
-  theads: Message[];
+  threadId: number;
   removed: boolean;
   hidden: boolean;
+  sender: User;
+  thread?: Thread;
 }

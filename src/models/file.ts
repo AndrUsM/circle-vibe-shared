@@ -1,8 +1,10 @@
-import { FileType } from "src/enums";
+import { MessageFileEntityType, MessageFileType } from "src/enums";
 
-export interface File {
+export interface MessageFile {
+  id: number;
   fileName: string;
+  description: string;
   url: string;
-  type: FileType;
-  description?: string;
+  type: MessageFileType;
+  entityType: MessageFileEntityType;
 }

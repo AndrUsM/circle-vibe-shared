@@ -1,19 +1,22 @@
-import { UserType } from "src/enums";
-import { File } from "./file";
+import { UserChatRole, UserRole, UserType } from "src/enums";
 
 export interface User {
-  _id: string;
+  id: number;
   username: string;
   surname: string;
-  birthDate?: Date;
+  birthDate: Date;
   password: string;
-  avatar?: File;
+  avatarUrl: string;
   isHiddenContactInfo: boolean;
-  country?: string | null;
-  city?: string;
+  country: string;
+  city: string;
   email: string;
   privateKey: string;
   privateToken: string;
-  primaryPhone?: string | null;
+  primaryPhone: string;
   type: UserType;
+  role: UserRole;
+  chatRole: UserChatRole;
+  createdAt: Date;
+  updatedAt: Date;
 }
