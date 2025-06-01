@@ -1,4 +1,4 @@
-import { UserRole, UserType } from "src/enums";
+import { UserChatStatus, UserRole, UserType } from "src/enums";
 
 export interface User {
   id: number;
@@ -18,4 +18,5 @@ export interface User {
   role: UserRole;
   createdAt: Date;
   updatedAt: Date;
+  chatStatus: UserChatStatus;
 }
