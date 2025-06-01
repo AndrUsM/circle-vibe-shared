@@ -18,7 +18,7 @@ export type JoinChatSocketParams = {
 export type CreateChatSocketParams = {
   hidden: boolean;
   name: string;
-  description?: string;
+  description: string;
   type: ChatType;
   usersLimit?: number;
 };
