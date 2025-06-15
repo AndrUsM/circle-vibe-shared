@@ -1,3 +1,5 @@
 export const isTokenExpired = (exp: number): boolean => {
-  return exp < new Date().getTime();
+  const nowInSeconds = Math.floor(Date.now() / 1000);
+
+  return exp < nowInSeconds;
 };
