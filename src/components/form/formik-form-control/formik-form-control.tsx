@@ -14,6 +14,7 @@ interface FormikFormGroupProps extends React.HTMLAttributes<HTMLDivElement> {
 export const FormikFormControl: ExtendedReactFunctionalComponent<FormikFormGroupProps> = ({
   formFieldName,
   isRequired,
+  className,
   children
 }) => {
   const [{ value, onBlur }, { touched, error }, { setValue, setTouched, setError }] = useField<unknown>(formFieldName);
@@ -42,7 +43,7 @@ export const FormikFormControl: ExtendedReactFunctionalComponent<FormikFormGroup
         }
       }}
     >
-      <FormControl>{children}</FormControl>
+      <FormControl className={className}>{children}</FormControl>
     </FieldContextProvider>
   )
 }
