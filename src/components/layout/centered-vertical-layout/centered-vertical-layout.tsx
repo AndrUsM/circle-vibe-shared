@@ -12,10 +12,19 @@ interface CenteredVertialLayoutProps {
 export const CenteredVertialLayout: ExtendedReactFunctionalComponent<CenteredVertialLayoutProps> = ({
   space = 'initial',
   justifyContent = 'initial',
-  children
+  children,
+  ...rest
 }) => (
-  <div className="centered-vertical-layout" style={{
-    '--space': space,
-    '--justify-content': justifyContent
-  } as CustomCssVariables}>{children}</div>
-)
+  <div
+    className="centered-vertical-layout"
+    style={
+      {
+        '--space': space,
+        '--justify-content': justifyContent,
+      } as CustomCssVariables
+    }
+    {...rest}
+  >
+    {children}
+  </div>
+);

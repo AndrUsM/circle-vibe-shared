@@ -16,11 +16,20 @@ export const ClusterLayout: ExtendedReactFunctionalComponent<ClusterLayoutProps>
   alignItems = 'initial',
   justifyContent = 'initial',
   className,
-  space = '1rem'
+  space = '1rem',
+  ...rest
 }) => (
-  <div className={`cluster-layout ${className ?? ''}`} style={{
-    '--space': space,
-    '--justify-content': justifyContent,
-    '--align-items': alignItems
-  } as CustomCssVariables}>{children}</div>
-)
+  <div
+    className={`cluster-layout ${className ?? ''}`}
+    style={
+      {
+        '--space': space,
+        '--justify-content': justifyContent,
+        '--align-items': alignItems,
+      } as CustomCssVariables
+    }
+    {...rest}
+  >
+    {children}
+  </div>
+);

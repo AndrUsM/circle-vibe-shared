@@ -15,12 +15,20 @@ export const StackLayout: ExtendedReactFunctionalComponent<StackLayoutProps> = (
   alignItems = 'initial',
   justifyContent = 'initial',
   className,
-  space = '1rem'
+  space = '1rem',
+  ...rest
 }) => (
-  <div className={`stack-layout ${className ?? ''}`} style={{
-    '--space': space,
-    '--justify-content': justifyContent,
-    '--align-items': alignItems
-  } as CustomCssVariables}>{children}</div>
-)
-
+  <div
+    className={`stack-layout ${className ?? ''}`}
+    style={
+      {
+        '--space': space,
+        '--justify-content': justifyContent,
+        '--align-items': alignItems,
+      } as CustomCssVariables
+    }
+    {...rest}
+  >
+    {children}
+  </div>
+);
