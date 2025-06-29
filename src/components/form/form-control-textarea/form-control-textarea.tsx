@@ -24,7 +24,7 @@ export const FormControlTextarea: ExtendedReactFunctionalComponent<
         const value = getFormikTextreaFormControlValue(e);
         fieldProvider.setValue(value as unknown as string);
       }}
-      className="text-input-generic-styles"
+      className={`text-input-generic-styles ${props.className ?? ''}`}
       style={
         {
           '--text-input-border-color':
