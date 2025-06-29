@@ -2,7 +2,6 @@ import React from 'react';
 import classnames from 'classnames';
 
 import { ExtendedReactFunctionalComponent } from 'src/types';
-import { ClusterLayout } from 'src/components/layout';
 
 interface LabelProps {
   hasErrors?: boolean;

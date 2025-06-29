@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 
-import { CenteredVertialLayout } from 'src/components/layout';
+import { CenteredVertialLayout } from '../../layout';
 import { ExtendedReactFunctionalComponent } from 'src/types';
 import { Label } from '../label/label';
 
