@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import TextareaAutosize from 'react-textarea-autosize';
-
 import { CustomCssVariables } from '../../../types/custom-css-variables';
 import { ExtendedReactFunctionalComponent } from '../../../types/extended-react-functional-component';
 import { FieldContext } from '../field-context/field-context';
@@ -15,7 +14,7 @@ export const FormControlTextarea: ExtendedReactFunctionalComponent<
 > = (props) => {
   const fieldProvider = useContext(FieldContext);
 
-  return (
+  if (typeof window !== 'undefined') {
     <TextareaAutosize
       {...props}
       {...fieldProvider}
@@ -48,6 +47,8 @@ export const FormControlTextarea: ExtendedReactFunctionalComponent<
           })`,
         } as CustomCssVariables
       }
-    />
-  );
+    />;
+  }
+
+  return <></>;
 };
