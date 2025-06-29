@@ -14,3 +14,4 @@ export * from './form-control-select';
 export * from './select';
 export * from './checkbox';
 export * from './form-control-checkbox';
+export * from './form-control-textarea';

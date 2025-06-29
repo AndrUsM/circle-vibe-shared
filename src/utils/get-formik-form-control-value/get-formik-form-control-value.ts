@@ -11,5 +11,15 @@ export const getFormikFormControlValue = (event: SyntheticEvent<HTMLInputElement
     return target.checked;
   }
 
+  if (target.type === 'textearea') {
+    return target.value;
+  }
+
   return target.value;
 };
+
+
+export const getFormikTextreaFormControlValue = (event: SyntheticEvent<HTMLTextAreaElement>) => {
+  const target = event.currentTarget;
+  return target.value;
+}

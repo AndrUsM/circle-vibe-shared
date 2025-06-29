@@ -56,8 +56,15 @@ export interface SendFileMessagePartChatSocketParams {
 // }
 
 export interface SendFileMessageChatSocketParams {
-  message: SendFileMessagePartChatSocketParams;
-  file: File;
+  content: string;
+  chatId: number;
+  senderId: number;
+  threadId?: number;
+  hidden: boolean;
+  messageType: MessageType;
+  fileUrl: string;
+  optimizedUrl: string;
+  fileMeta: SendFileMessageMetaInput;
 }
 
 export interface SendMessageSocketParams {
