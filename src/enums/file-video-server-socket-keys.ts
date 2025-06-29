@@ -1,4 +1,4 @@
-export enum FileServerSocketKeys {
+export enum FileVideoServerSocketKeys {
   START_VIDEO_UPLOAD = 'START_VIDEO_UPLOAD',
   UPLOAD_VIDEO_STARTED = 'UPLOAD_VIDEO_STARTED',
   UPLOAD_VIDEO_ERROR = 'UPLOAD_VIDEO_ERROR',

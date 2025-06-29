@@ -12,3 +12,4 @@ export * from './message-file-entity-type';
 export * from './sort-direction';
 export * from './user-chat-status';
 export * from './gateway-namespaces';
+export * from './file-video-server-socket-keys';

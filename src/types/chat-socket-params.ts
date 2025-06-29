@@ -26,7 +26,7 @@ export interface SendMessageChatSocketParams {
   content: string;
   chatId: number;
   senderId: number;
-  threadId: number | null;
+  threadId?: number;
   hidden: boolean;
   messageType: MessageType;
 }
@@ -35,7 +35,7 @@ export interface SendFileMessagePartChatSocketParams {
   content: string;
   chatId: number;
   senderId: number;
-  threadId: number | null;
+  threadId?: number;
   hidden: boolean;
   messageType: MessageType;
   fileMeta: SendFileMessageMetaInput;
