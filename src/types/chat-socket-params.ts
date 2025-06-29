@@ -1,12 +1,11 @@
-import { ChatType, UserRole, UserType } from 'src/enums';
+import { ChatType, MessageFileEntityType, MessageFileType, MessageType, UserRole, UserType } from 'src/enums';
 import { Chat, Message } from 'src/models';
-
 
 export interface RefreshChatsSocketParams {
   chatId: number;
   cursor?: number;
   sortBy?: string;
-  sortDirection?: ''
+  sortDirection?: '';
 }
 
 export type JoinChatSocketParams = {
@@ -23,6 +22,25 @@ export type CreateChatSocketParams = {
   usersLimit?: number;
 };
 
+export interface SendMessageChatSocketParams {
+  content: string;
+  chatId: number;
+  senderId: number;
+  threadId: number | null;
+  hidden: boolean;
+  messageType: MessageType;
+}
+
+export interface SendFileMessagePartChatSocketParams {
+  content: string;
+  chatId: number;
+  senderId: number;
+  threadId: number | null;
+  hidden: boolean;
+  messageType: MessageType;
+  fileMeta: SendFileMessageMetaInput;
+}
+
 // export interface ChatsFilter {
 //   page: number;
 //   limit: number;
@@ -37,7 +55,24 @@ export type CreateChatSocketParams = {
 //   hidden?: boolean;
 // }
 
+export interface SendFileMessageChatSocketParams {
+  message: SendFileMessagePartChatSocketParams;
+  file: File;
+}
+
 export interface SendMessageSocketParams {
+  content: string;
   chatId: number;
-  message: Message;
+  senderId: number;
+  threadId?: number;
+  hidden: boolean;
+  messageType: MessageType;
+}
+
+export interface SendFileMessageMetaInput {
+  fileName: string;
+  description?: string;
+  type: MessageFileType;
+  fileType: string;
+  entityType: MessageFileEntityType;
 }

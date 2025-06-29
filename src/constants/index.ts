@@ -6,3 +6,5 @@ export * from './default-tooltip-animation';
 export * from './animation-in-bottom-position';
 export * from './country-codes';
 export * from './nationality-codes';
+export * from './ms-document.regex';
+export * from './document-regex';
