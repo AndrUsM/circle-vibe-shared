@@ -19,4 +19,5 @@ export interface Message {
   hidden: boolean;
   sender: ChatParticipant;
   thread?: Thread;
+  isSavedMessages?: boolean;
 }
