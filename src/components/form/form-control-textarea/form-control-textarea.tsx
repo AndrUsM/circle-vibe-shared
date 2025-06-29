@@ -14,6 +14,7 @@ export const FormControlTextarea: ExtendedReactFunctionalComponent<
   const fieldProvider = useContext(FieldContext);
 
   if (typeof window !== 'undefined') {
+    // @ts-ignore
     import('react-textarea-autosize').then((TextareaAutosize) => {
       return (
         // @ts-ignore
