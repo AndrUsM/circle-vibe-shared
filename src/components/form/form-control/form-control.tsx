@@ -1,7 +1,7 @@
 
 import React from 'react';
 
-import { StackLayout } from "../../layout";
+import { StackLayout } from "src/components/layout";
 import { ExtendedReactFunctionalComponent } from "src/types";
 
 export const FormControl: ExtendedReactFunctionalComponent = ({ children, ...rest }) => {

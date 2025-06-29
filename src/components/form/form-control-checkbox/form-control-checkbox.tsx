@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 
 import { ExtendedReactFunctionalComponent } from '../../../types/extended-react-functional-component';
 import { FieldContext } from '../field-context/field-context';
-import { StackLayout } from '../../layout';
+import { StackLayout } from 'src/components/layout';
 import { FormControlError } from '../form-control-error';
 import { Checkbox } from '../checkbox';
 import { getFormikFormControlValue } from 'src/utils';
