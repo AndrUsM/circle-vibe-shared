@@ -7,6 +7,7 @@ export interface Chat {
   avatarUrl?: string;
   hidden: boolean;
   isActive: boolean;
+  isSavedMessages?: boolean;
   name: string;
   readableName: string;
   description?: string;
