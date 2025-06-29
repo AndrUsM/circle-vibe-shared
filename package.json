@@ -32,7 +32,6 @@
     "formik": ">=2.4.6",
     "react": ">=16",
     "react-dom": ">=16",
-    "react-textarea-autosize": "^8.5.9",
     "yup": ">=1.6"
   },
   "dependencies": {

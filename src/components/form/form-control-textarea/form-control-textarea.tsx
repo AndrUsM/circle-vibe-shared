@@ -13,48 +13,40 @@ export const FormControlTextarea: ExtendedReactFunctionalComponent<
 > = (props) => {
   const fieldProvider = useContext(FieldContext);
 
-  if (typeof window !== 'undefined') {
+  return (
     // @ts-ignore
-    import('react-textarea-autosize').then((TextareaAutosize) => {
-      return (
-        // @ts-ignore
-        <TextareaAutosize
-          {...props}
-          {...fieldProvider}
-          inputMode={props.inputMode ?? 'text'}
-          // @ts-ignore
-          onChange={(e) => {
-            const value = getFormikTextreaFormControlValue(e);
-            fieldProvider.setValue(value as unknown as string);
-          }}
-          className="text-input-generic-styles"
-          // @ts-ignore
-          style={
-            {
-              '--text-input-border-color':
-                (fieldProvider.errors ?? '')?.length > 0
-                  ? 'var(--text-input-error-border-color)'
-                  : 'var(--text-input-default-border-color)',
-              '--text-input-text-color': `var(${
-                (fieldProvider.errors ?? '')?.length > 0
-                  ? '--text-input-error-text-color'
-                  : '--text-input-default-text-color'
-              })`,
-              '--text-input-outline-color':
-                (fieldProvider.errors ?? '')?.length > 0
-                  ? 'var(--text-input-error-outline-color)'
-                  : 'transparent',
-              '--text-input-background': `var(${
-                (fieldProvider.errors ?? '')?.length > 0
-                  ? '--text-input-error-bg-color'
-                  : '--text-input-default-bg-color'
-              })`,
-            } as CustomCssVariables
-          }
-        />
-      );
-    });
-  }
-
-  return <></>;
+    <textarea
+      rows={3}
+      {...props}
+      {...fieldProvider}
+      inputMode={props.inputMode ?? 'text'}
+      onChange={(e) => {
+        const value = getFormikTextreaFormControlValue(e);
+        fieldProvider.setValue(value as unknown as string);
+      }}
+      className="text-input-generic-styles"
+      style={
+        {
+          '--text-input-border-color':
+            (fieldProvider.errors ?? '')?.length > 0
+              ? 'var(--text-input-error-border-color)'
+              : 'var(--text-input-default-border-color)',
+          '--text-input-text-color': `var(${
+            (fieldProvider.errors ?? '')?.length > 0
+              ? '--text-input-error-text-color'
+              : '--text-input-default-text-color'
+          })`,
+          '--text-input-outline-color':
+            (fieldProvider.errors ?? '')?.length > 0
+              ? 'var(--text-input-error-outline-color)'
+              : 'transparent',
+          '--text-input-background': `var(${
+            (fieldProvider.errors ?? '')?.length > 0
+              ? '--text-input-error-bg-color'
+              : '--text-input-default-bg-color'
+          })`,
+        } as CustomCssVariables
+      }
+    />
+  );
 };
