@@ -5,6 +5,7 @@ export interface MessageFile {
   fileName: string;
   description: string;
   url: string;
+  optimizedUrl: string;
   type: MessageFileType;
   entityType: MessageFileEntityType;
 }
