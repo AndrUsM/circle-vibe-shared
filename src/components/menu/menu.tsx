@@ -26,7 +26,6 @@ export const Menu: ExtendedReactFunctionalComponent<DropdownMenuProps> = ({
   onOpenChange,
   dropdownPlacement = "bottom-end",
   zIndex = 10,
-  backgroundColorOfContent = 'var(--cv-light)',
   strategy = "absolute",
   children,
   ...divAttributes
@@ -63,7 +62,6 @@ export const Menu: ExtendedReactFunctionalComponent<DropdownMenuProps> = ({
           dropdownProps={contentProps}
           transitionStyles={transitionStyles}
           zIndex={zIndex}
-          backgroundColor={backgroundColorOfContent}
           fullDropdownWidth={fullDropdownWidth}
         >
           {children}

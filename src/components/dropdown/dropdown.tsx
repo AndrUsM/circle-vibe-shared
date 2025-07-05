@@ -11,7 +11,6 @@ interface DropdownProps {
   readonly transitionStyles?: StyleHTMLAttributes<HTMLDivElement>;
   readonly dropdownProps?: Record<string, unknown>;
   readonly zIndex?: number;
-  readonly backgroundColor?: string;
   readonly fullDropdownWidth?: boolean;
 }
 
@@ -21,7 +20,6 @@ export const Dropdown: ExtendedReactFunctionalComponent<DropdownProps> = ({
   dropdownProps,
   transitionStyles,
   useOverlayDarkenBackground,
-  backgroundColor = 'var(--cv-light)',
   zIndex = 10,
   fullDropdownWidth = false,
   ...props
@@ -36,7 +34,6 @@ export const Dropdown: ExtendedReactFunctionalComponent<DropdownProps> = ({
         style={{
           zIndex: open ? zIndex : 1,
           width: fullDropdownWidth ? '100%' : 'auto',
-          backgroundColor,
           ...transitionStyles,
         }}
         {...props}
