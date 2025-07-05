@@ -4,6 +4,7 @@ import { User } from "./user";
 
 export interface ChatParticipant {
   id: number;
+  isMuted: boolean;
   userId: number;
   chatId: number;
   user: User;
