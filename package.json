@@ -1,6 +1,6 @@
 {
   "name": "@circle-vibe/shared",
-  "version": "1.1.56",
+  "version": "1.1.57",
   "types": "./build/index.d.ts",
   "description": "Shared componenets, utils, hooks",
   "scripts": {
