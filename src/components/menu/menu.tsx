@@ -15,6 +15,7 @@ interface DropdownMenuProps extends React.HTMLAttributes<HTMLDivElement> {
   readonly onOpenChange?: (open: boolean) => void;
   readonly dropdownPlacement?: Placement;
   readonly zIndex?: number;
+  readonly backgroundColorOfContent?: string;
   readonly strategy?: "fixed" | "absolute";
 }
 
@@ -25,6 +26,7 @@ export const Menu: ExtendedReactFunctionalComponent<DropdownMenuProps> = ({
   onOpenChange,
   dropdownPlacement = "bottom-end",
   zIndex = 10,
+  backgroundColorOfContent = 'var(--cv-light)',
   strategy = "absolute",
   children,
   ...divAttributes
@@ -61,6 +63,7 @@ export const Menu: ExtendedReactFunctionalComponent<DropdownMenuProps> = ({
           dropdownProps={contentProps}
           transitionStyles={transitionStyles}
           zIndex={zIndex}
+          backgroundColor={backgroundColorOfContent}
           fullDropdownWidth={fullDropdownWidth}
         >
           {children}
