@@ -8,32 +8,21 @@ const TS_CONFIG = path.resolve(__dirname, 'tsconfig.json');
 const OUTPUT_PATH = path.resolve(__dirname, 'build');
 
 const BABEL_LOADER = {
-  test: /\.(ts|tsx|js|jsx)?$/,
+  test: /\.(ts|js)?$/,
   exclude: /node_modules/,
   use: {
     loader: 'babel-loader',
     options: {
       presets: [
         ['@babel/preset-env', { modules: false }],
-        '@babel/preset-react',
         ['@babel/preset-typescript', { onlyRemoveTypeImports: true }],
       ],
     },
   },
 };
 
-const SVG_LOADER = {
-  test: /\.svg$/,
-  use: ['@svgr/webpack', 'url-loader'],
-};
-
-const SCSS_LOADER = {
-  test: /\.scss$/,
-  use: ['style-loader', 'css-loader', 'sass-loader'],
-};
-
 const resolve = {
-  extensions: ['.ts', '.tsx', '.js', '.jsx'],
+  extensions: ['.ts', '.js'],
   plugins: [
     new TsconfigPathsPlugin({
       configFile: TS_CONFIG,
@@ -59,11 +48,11 @@ const CONFIG = {
     minimizer: [new TerserPlugin()],
   },
   module: {
-    rules: [BABEL_LOADER, SVG_LOADER, SCSS_LOADER],
+    rules: [BABEL_LOADER],
   },
   resolve,
   stats: 'minimal',
-  externals: ['react', 'date-fns', 'react-dom', 'react-router', 'react-router-dom'],
+  externals: ['date-fns'],
   plugins: [
     new ForkTsCheckerWebpackPlugin({
       typescript: {
