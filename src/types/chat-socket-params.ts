@@ -11,6 +11,18 @@ export interface RefreshChatsSocketParams {
 // @RoomName
 export type RefreshMessagesSocketParams = string;
 
+export interface SendFileMessageChatSocketParams {
+  content: string;
+  chatId: number;
+  senderId: number;
+  threadId?: number;
+  hidden: boolean;
+  messageType: MessageType;
+  fileUrl: string;
+  optimizedUrl: string;
+  fileMeta: SendFileMessageMetaInput;
+}
+
 export type JoinChatSocketParams = {
   chatId: number;
   cursor?: number;
@@ -57,18 +69,6 @@ export interface SendFileMessagePartChatSocketParams {
 //   name?: string;
 //   hidden?: boolean;
 // }
-
-export interface SendFileMessageChatSocketParams {
-  content: string;
-  chatId: number;
-  senderId: number;
-  threadId?: number;
-  hidden: boolean;
-  messageType: MessageType;
-  fileUrl: string;
-  optimizedUrl: string;
-  fileMeta: SendFileMessageMetaInput;
-}
 
 export interface SendMessageSocketParams {
   content: string;
