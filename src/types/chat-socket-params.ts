@@ -11,6 +11,31 @@ export interface RefreshChatsSocketParams {
 // @RoomName
 export type RefreshMessagesSocketParams = string;
 
+export interface RequestChatsWithPaginationChatSocketParams {
+  page: number;
+  pageSize: number;
+  removed?: boolean;
+  name?: string;
+  readableName?: string;
+  type?: ChatType;
+}
+
+export interface RequestMessagesWithPaginationChatSocketParams {
+  page: number;
+  pageSize: number;
+  chatId: number[];
+  content?: string;
+  senderId?: number;
+}
+
+export interface RequestChatParticipantsWithPagniationSocketParams {
+  page: number;
+  pageSize: number;
+  chatId: number;
+  username?: string;
+  fullUserName?: string;
+}
+
 export interface SendFileMessageChatSocketParams {
   content: string;
   chatId: number;
