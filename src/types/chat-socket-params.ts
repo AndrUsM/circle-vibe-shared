@@ -8,6 +8,9 @@ export interface RefreshChatsSocketParams {
   sortDirection?: '';
 }
 
+// @RoomName
+export type RefreshMessagesSocketParams = string;
+
 export type JoinChatSocketParams = {
   chatId: number;
   cursor?: number;
