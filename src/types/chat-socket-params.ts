@@ -33,6 +33,7 @@ export interface RequestChatParticipantsWithPagniationSocketParams {
   page: number;
   pageSize: number;
   chatId: number;
+  userId: number;
   username?: string;
   fullUserName?: string;
 }
