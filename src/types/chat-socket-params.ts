@@ -23,7 +23,7 @@ export interface RequestChatsWithPaginationChatSocketParams {
 export interface RequestMessagesWithPaginationChatSocketParams {
   page: number;
   pageSize: number;
-  chatId: number[];
+  chatId: number;
   content?: string;
   senderId?: number;
 }
