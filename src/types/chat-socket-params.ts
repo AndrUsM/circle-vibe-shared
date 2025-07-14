@@ -12,6 +12,7 @@ export interface RefreshChatsSocketParams {
 export type RefreshMessagesSocketParams = string;
 
 export interface RequestChatsWithPaginationChatSocketParams {
+  userId: number;
   page: number;
   pageSize: number;
   removed?: boolean;
