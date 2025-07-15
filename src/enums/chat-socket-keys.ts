@@ -2,7 +2,7 @@ export enum ChatSocketCommand {
   RECEIVE_MESSAGES = "receive_messages",
   RECEIVE_CHAT_PARTICIPANTS = "receive_chat_participants",
   AUTH_ERROR = "auth_error",
-  REFRESH_CHATS = "refresh_chats",
+  RECEIVE_CHATS = "receive_chats",
   SEND_MESSAGE = "send_message",
   JOIN_CHAT = "join_chat",
   LEAVE_CHAT = "leave_chat",
