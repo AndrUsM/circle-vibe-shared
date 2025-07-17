@@ -22,4 +22,5 @@ export interface Chat {
   removed: boolean;
   lastMessageId: number;
   lastMessage: Message;
+  encryptionSecret: string;
 }
