@@ -97,15 +97,6 @@ export interface SendFileMessagePartChatSocketParams {
 //   hidden?: boolean;
 // }
 
-export interface SendMessageSocketParams {
-  content: string;
-  chatId: number;
-  senderId: number;
-  threadId?: number;
-  hidden: boolean;
-  messageType: MessageType;
-}
-
 export interface SendFileMessageMetaInput {
   fileName: string;
   description?: string;
