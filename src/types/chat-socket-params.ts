@@ -99,7 +99,9 @@ export interface SendFileMessagePartChatSocketParams {
 
 export interface ReplyMessageChatSocketParams {
   parentMessageId: number;
-  messageInputParams: SendMessageChatSocketParams;
+  theadId?: number;
+  messageInputParams?: SendMessageChatSocketParams;
+  fileMessageInputParams?: SendFileMessagePartChatSocketParams;
 }
 
 export interface SendFileMessageMetaInput {
