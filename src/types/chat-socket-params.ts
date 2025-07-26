@@ -3,6 +3,7 @@ import { Chat, Message } from 'src/models';
 
 export interface RefreshChatsSocketParams {
   chatId: number;
+  threadId?: number;
   cursor?: number;
   sortBy?: string;
   sortDirection?: '';
@@ -25,6 +26,7 @@ export interface RequestMessagesWithPaginationChatSocketParams {
   page: number;
   pageSize: number;
   chatId: number;
+  threadId?: number;
   content?: string;
   senderId?: number;
 }
@@ -96,13 +98,6 @@ export interface SendFileMessagePartChatSocketParams {
 //   name?: string;
 //   hidden?: boolean;
 // }
-
-export interface ReplyMessageChatSocketParams {
-  parentMessageId: number;
-  theadId?: number;
-  messageInputParams?: SendMessageChatSocketParams;
-  fileMessageInputParams?: SendFileMessagePartChatSocketParams;
-}
 
 export interface SendFileMessageMetaInput {
   fileName: string;

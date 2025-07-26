@@ -1,12 +1,13 @@
 import { Chat } from "./chat";
+import { ChatParticipant } from "./chat-participant";
 import { Message } from "./message";
-import { ThreadParticipant } from "./thread-participant";
 
 export interface Thread {
   id: number;
   message: Message[];
   chatId: number;
   chat: Chat;
+  parentMessageId: number;
   messages: Message[];
-  participants: ThreadParticipant[];
+  participants: ChatParticipant[];
 }
