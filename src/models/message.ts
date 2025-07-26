@@ -15,6 +15,7 @@ export interface Message {
   updatedAt: Date;
   messageType: MessageType;
   childThreadId?: number;
+  threads?: Message[];
   threadId: number;
   removed: boolean;
   hidden: boolean;
