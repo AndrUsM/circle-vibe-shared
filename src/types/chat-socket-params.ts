@@ -97,6 +97,11 @@ export interface SendFileMessagePartChatSocketParams {
 //   hidden?: boolean;
 // }
 
+export interface ReplyMessageChatSocketParams {
+  parentMessageId: number;
+  messageInputParams: SendMessageChatSocketParams;
+}
+
 export interface SendFileMessageMetaInput {
   fileName: string;
   description?: string;
