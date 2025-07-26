@@ -1,13 +1,16 @@
-export interface FileVideoSocketConnectionAuthParams {
+import { MessageFileEntityType } from "src/enums";
+
+export interface FileSocketConnectionAuthParams {
   token: string;
 }
 
-export interface FileVideoSocketStartUploadParams {
+export interface FileSocketStartUploadParams {
   fileName: string;
+  type: MessageFileEntityType;
 }
 
-export type FileVideoSocketErrorOutput = string;
+export type FileSocketErrorOutput = string;
 
-export interface FileVideoSocketSuccessOutput {
+export interface FileSocketSuccessOutput {
   filePath: string;
 }
