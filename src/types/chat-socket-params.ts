@@ -66,6 +66,10 @@ export type CreateChatSocketParams = {
   usersLimit?: number;
 };
 
+export type NotifyAboutTypingSocketParams = {
+  chatId: number;
+}
+
 export interface SendMessageChatSocketParams {
   content: string;
   chatId: number;
