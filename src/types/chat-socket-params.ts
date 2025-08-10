@@ -28,7 +28,7 @@ export interface RequestMessagesWithPaginationChatSocketParams {
   chatId: number;
   threadId?: number;
   content?: string;
-  senderId?: number;
+  senderIds?: number[];
 }
 
 export interface RequestChatParticipantsWithPagniationSocketParams {
