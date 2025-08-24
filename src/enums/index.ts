@@ -14,3 +14,4 @@ export * from './user-chat-status';
 export * from './gateway-namespaces';
 export * from './generic-file-server-socket-keys';
 export * from './email-server-template-name';
+export * from './conversation-bucket-name.enum';
